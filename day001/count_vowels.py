@@ -8,5 +8,5 @@ def count_vowels(text: str) -> int:
     Returns:
         int: The number of vowels in the input string.
     """
-    vowels = "aeiouAEIOU"
-    return sum(1 for char in text if char in vowels)
+    vowels = {"a", "e", "i", "o", "u"}
+    return sum(1 for char in text if char.lower() in vowels)

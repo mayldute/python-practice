@@ -1,3 +1,13 @@
+"""
+Task: Count word frequency in a text.
+
+Requirements:
+- Ignore letter case.
+- Ignore punctuation.
+- Return a dictionary with words and counts.
+- Use dictionary operations.
+"""
+
 import string
 from collections import Counter
 
@@ -15,12 +25,6 @@ def normalize(text: str) -> list[str]:
 def count_words(text: str) -> dict[str, int]:
     """
     Count the number of occurrences of each word in a given text.
-
-    Args:
-        text (str): The input string to count words in.
-
-    Returns:
-        dict[str, int]: A dictionary with words as keys and their counts as values.
     """
     word_counts = {}
     
@@ -31,11 +35,5 @@ def count_words(text: str) -> dict[str, int]:
 def count_words_alternative(text: str) -> dict[str, int]:
     """
     Count the number of occurrences of each word in a given text using Counter.
-
-    Args:
-        text (str): The input string to count words in.
-
-    Returns:
-        dict[str, int]: A dictionary with words as keys and their counts as values.
     """
     return dict(Counter(normalize(text)))

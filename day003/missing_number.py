@@ -26,3 +26,9 @@ def find_missing(items: list[int]) -> int:
 
     return expected_sum - actual_sum
 
+
+def find_missing_alternative(items: list[int]) -> int:
+    expected_sum = sum(range(len(items) + 1))
+    actual_sum = sum(items)
+
+    return expected_sum - actual_sum

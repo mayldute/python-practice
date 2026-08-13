@@ -13,6 +13,7 @@ Requirements:
 - Aim for O(1) additional space.
 """
 
+
 def find_missing(items: list[int]) -> int:
     n = len(items) + 1
     expected_sum = 0

@@ -8,6 +8,7 @@ Requirements:
 - Aim for O(n) complexity.
 """
 
+
 def remove_duplicates(items: list[int]) -> list[int]:
     """
     Remove duplicates from a list of integers while preserving the original order.

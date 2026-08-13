@@ -13,6 +13,7 @@ Requirements:
 - Aim for O(n + m) time complexity.
 """
 
+
 def count_letters(normalized_text: str) -> dict[str, int]:
     counts = {}
 

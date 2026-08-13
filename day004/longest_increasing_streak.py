@@ -14,6 +14,7 @@ Requirements:
 - Aim for O(1) additional space.
 """
 
+
 def longest_increasing_streak(items: list[int]) -> int:
     if not items:
         return 0

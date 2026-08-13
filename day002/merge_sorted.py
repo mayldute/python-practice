@@ -11,6 +11,7 @@ Requirements:
 - Aim for O(n + m) time complexity.
 """
 
+
 def merge_sorted(first: list[int], second: list[int]) -> list[int]:
     result = []
     i = 0

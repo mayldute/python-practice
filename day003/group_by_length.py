@@ -13,6 +13,7 @@ Requirements:
 - Aim for O(n) time complexity.
 """
 
+
 def group_by_length(words: list[str]) -> dict[int, list[str]]:
     result = {}
 

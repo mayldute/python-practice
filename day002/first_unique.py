@@ -11,6 +11,7 @@ Requirements:
 - Aim for O(n) time complexity.
 """
 
+
 def first_unique(text: str) -> str | None:
     counts = {}
 

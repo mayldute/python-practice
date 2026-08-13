@@ -13,6 +13,7 @@ Requirements:
 - Aim for O(n) time complexity.
 """
 
+
 def is_palindrome(text: str) -> bool:
     text = text.lower()
     i = 0

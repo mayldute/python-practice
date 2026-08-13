@@ -10,6 +10,7 @@ Requirements:
 - Aim for O(n) time complexity.
 """
 
+
 def count_vowels(text: str) -> int:
     """
     Count the number of vowels in a given text.

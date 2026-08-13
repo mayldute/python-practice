@@ -14,6 +14,7 @@ Requirements:
 - Aim for O(1) additional space.
 """
 
+
 def second_largest(items: list[int]) -> int | None:
 
     if len(items) < 2:

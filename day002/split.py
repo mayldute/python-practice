@@ -1,6 +1,5 @@
-from typing import List
 
-def split(data: str, sep=None, maxsplit=-1):
+def split(data: str, sep=None, maxsplit=-1) -> list:
     """Split a string into a list using the specified separator."""
     if maxsplit == 0:
         return [data.strip()] if sep is None else [data]

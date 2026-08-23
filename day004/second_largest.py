@@ -25,7 +25,7 @@ def second_largest(items: list[int]) -> int | None:
 
     for item in items[1:]:
         if item < largest and (second is None or item > second):
-            second = items[i]
+            second = item
         elif item > largest:
             second = largest
             largest = item

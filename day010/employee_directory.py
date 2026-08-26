@@ -69,7 +69,7 @@ class EmployeeDirectory:
         if not employees_by_department:
             return 0
 
-        total_salary = sum(employee.salary for employee in employees_by_department) 
+        total_salary = sum(employee.salary for employee in employees_by_department)
         return total_salary / len(employees_by_department)
 
     def highest_paid(self, department: str) -> Employee | None:

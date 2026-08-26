@@ -30,7 +30,7 @@ class Song:
 
         if duration <= 0:
             raise ValueError("Duration must be greater than 0.")
-        
+
         self.duration = duration
 
 
@@ -50,7 +50,7 @@ class Playlist:
     def total_duration(self) -> int:
         if not self.playlist:
             return 0
-        
+
         total = 0
 
         for song in self.playlist:

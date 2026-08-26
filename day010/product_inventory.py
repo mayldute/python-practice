@@ -31,12 +31,12 @@ class Product:
 
         if price <= 0:
             raise ValueError("Price must be greater than 0.")
-        
+
         self.price = price
 
         if quantity < 0:
             raise ValueError("Quantity cannot be negative.")
-        
+
         self.quantity = quantity
 
 
@@ -56,7 +56,7 @@ class Inventory:
         for product in self.products:
             if product.name == product_name:
                 return product
-            
+
         return None
 
     def total_value(self) -> float:
@@ -70,5 +70,5 @@ class Inventory:
     def most_expensive_product(self) -> Product | None:
         if not self.products:
             return None
-        
+
         return max(self.products, key=lambda product: product.price)

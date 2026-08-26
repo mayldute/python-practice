@@ -27,9 +27,9 @@ class EmailNotification(Notification):
     def __init__(self, email: str):
         self.email = email.strip()
 
-        if not re.compile(
-            r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
-        ).match(self.email):
+        if not re.compile(r"^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$").match(
+            self.email
+        ):
             raise ValueError("Incorrect email format.")
 
     def send(self) -> str:
@@ -40,11 +40,8 @@ class SMSNotification(Notification):
     def __init__(self, phone: str):
         self.phone = re.sub(r"[\s\-\(\)]", "", phone)
 
-        if not re.compile(
-            r"^\+?[1-9]\d{1,14}$"
-        ).match(self.phone):
+        if not re.compile(r"^\+?[1-9]\d{1,14}$").match(self.phone):
             raise ValueError("Incorrect phone format.")
-        
 
     def send(self) -> str:
         return f"Sending SMS to {self.phone}"

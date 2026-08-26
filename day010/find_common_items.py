@@ -32,4 +32,4 @@ def find_common_items(first: list[int], second: list[int]) -> list[int]:
             result.append(number)
             seen.add(number)
 
-    return result 
+    return result

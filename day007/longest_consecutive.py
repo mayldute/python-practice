@@ -29,5 +29,5 @@ def longest_consecutive(items: list[int]) -> int:
                 count += 1
 
         max_count = max(max_count, count)
-        
+
     return max_count

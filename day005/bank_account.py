@@ -13,13 +13,14 @@ Requirements:
 - Raise ValueError for invalid operations.
 """
 
+
 class BankAccount:
     def __init__(self, owner: str, balance: float):
         self.owner = owner
 
         if balance < 0:
             raise ValueError("Balance can not be less than 0.")
-        
+
         self._balance = balance
 
     @property
@@ -30,7 +31,7 @@ class BankAccount:
         if amount <= 0:
             raise ValueError("Amount can not be less or equal 0.")
 
-        self._balance += amount 
+        self._balance += amount
 
     def withdraw(self, amount: float) -> None:
         if amount <= 0:

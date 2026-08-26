@@ -22,8 +22,6 @@ def sort_by_frequency(words: list[str]) -> list[str]:
     return [
         word
         for word, _ in sorted(
-            counts_words.items(),
-            key=lambda item: item[1],
-            reverse=True
+            counts_words.items(), key=lambda item: item[1], reverse=True
         )
     ]

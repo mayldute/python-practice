@@ -18,7 +18,7 @@ def find_missing(items: list[int]) -> int:
     n = len(items) + 1
     expected_sum = 0
     actual_sum = 0
-    
+
     for i in range(n):
         expected_sum += i
 

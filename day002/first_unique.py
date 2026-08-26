@@ -21,5 +21,5 @@ def first_unique(text: str) -> str | None:
     for key, v in counts.items():
         if v == 1:
             return key
-        
+
     return None

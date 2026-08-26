@@ -14,7 +14,7 @@ Requirements:
 
 def is_valid_parentheses(text: str) -> bool:
     stack = []
-    brackets = {')': '(', ']': '[', '}': '{'}
+    brackets = {")": "(", "]": "[", "}": "{"}
 
     for char in text:
         if char in brackets.values():
@@ -23,6 +23,6 @@ def is_valid_parentheses(text: str) -> bool:
             if stack and stack[-1] == brackets[char]:
                 stack.pop()
             else:
-                return  False
+                return False
 
     return not stack

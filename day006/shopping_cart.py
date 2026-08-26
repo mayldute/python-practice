@@ -23,7 +23,7 @@ class Product:
 
         if price < 0:
             raise ValueError("Price can not be less 0.")
-        
+
         self.price = price
 
 
@@ -34,7 +34,7 @@ class ShoppingCart:
     def add(self, product: Product, quantity: int) -> None:
         if quantity <= 0:
             raise ValueError("Quantity can not be equal or less 0.")
-        
+
         self.cart[product] = self.cart.get(product, 0) + quantity
 
     def total(self) -> float:

@@ -17,7 +17,7 @@ Requirements:
 def compress_list(items: list[int]) -> list[int]:
     if not items:
         return []
-    
+
     result = [items[0]]
 
     for index in range(1, len(items)):

@@ -25,7 +25,7 @@ def count_consecutive_duplicates(items: list[int]) -> int:
     count = 0
 
     for i in range(1, len(items)):
-        if  items[i] == items[i - 1]:
+        if items[i] == items[i - 1]:
             count += 1
 
     return count

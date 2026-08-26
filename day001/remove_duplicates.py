@@ -15,10 +15,10 @@ def remove_duplicates(items: list[int]) -> list[int]:
     """
     seen = set()
     unique_items = []
-    
+
     for item in items:
         if item not in seen:
             seen.add(item)
             unique_items.append(item)
-    
+
     return unique_items

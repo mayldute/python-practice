@@ -23,7 +23,7 @@ Examples:
 def remove_consecutive_duplicates(items: list[int]) -> list[int]:
     if not items:
         return []
-    
+
     result = [items[0]]
 
     for i in range(1, len(items)):

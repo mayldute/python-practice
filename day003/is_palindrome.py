@@ -18,7 +18,7 @@ def is_palindrome(text: str) -> bool:
     text = text.lower()
     i = 0
     j = len(text) - 1
- 
+
     while i < j:
         if not text[i].isalnum():
             i += 1
@@ -30,10 +30,8 @@ def is_palindrome(text: str) -> bool:
 
         if text[i] != text[j]:
             return False
-        
+
         i += 1
         j -= 1
 
     return True
-
-

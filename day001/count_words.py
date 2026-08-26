@@ -8,7 +8,6 @@ Requirements:
 - Use dictionary operations.
 """
 
-
 import string
 from collections import Counter
 
@@ -23,15 +22,17 @@ def normalize(text: str) -> list[str]:
         .split()
     )
 
+
 def count_words(text: str) -> dict[str, int]:
     """
     Count the number of occurrences of each word in a given text.
     """
     word_counts = {}
-    
+
     for word in normalize(text):
         word_counts[word] = word_counts.get(word, 0) + 1
     return word_counts
+
 
 def count_words_alternative(text: str) -> dict[str, int]:
     """

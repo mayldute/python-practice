@@ -48,4 +48,3 @@ class Product:
     @property
     def total(self):
         return self.price * self.quantity
-    

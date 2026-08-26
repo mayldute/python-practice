@@ -24,7 +24,7 @@ class LRUCache:
     def __init__(self, max_capacity):
         if max_capacity <= 0:
             raise ValueError("Maximum capacity can not be equal or less 0.")
-        
+
         self.max_capacity = max_capacity
         self.cache: dict[str, Node] = {}
         self.recently_used = []
@@ -34,14 +34,14 @@ class LRUCache:
             self.cache[key].value = value
             self.recently_used.remove(key)
             self.recently_used.append(key)
-            return 
+            return
 
         node = Node(key, value)
 
         if len(self.cache) >= self.max_capacity:
             least_recently_used = self.recently_used.pop(0)
             del self.cache[least_recently_used]
-        
+
         self.cache[key] = node
         self.recently_used.append(key)
 
@@ -50,5 +50,5 @@ class LRUCache:
             self.recently_used.remove(key)
             self.recently_used.append(key)
             return self.cache[key].value
-            
+
         return None

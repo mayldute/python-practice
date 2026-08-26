@@ -39,7 +39,7 @@ class Student:
     def average_grade(self) -> float:
         if not self.grades:
             return 0
-        
+
         return sum(self.grades) / len(self.grades)
 
 

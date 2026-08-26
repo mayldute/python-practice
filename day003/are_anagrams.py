@@ -32,5 +32,5 @@ def are_anagrams(first: str, second: str) -> bool:
 
     first_letters = count_letters(normalized_first)
     second_letters = count_letters(normalized_second)
-    
+
     return first_letters == second_letters

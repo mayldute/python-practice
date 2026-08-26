@@ -18,7 +18,7 @@ Requirements:
 def longest_increasing_streak(items: list[int]) -> int:
     if not items:
         return 0
-    
+
     max_count = 1
     current_count = 1
 

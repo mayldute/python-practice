@@ -34,7 +34,7 @@ class CardPayment(Payment):
             raise ValueError(
                 "Wrong card number. Must contain only numbers and count of numbers from 15 to 19."
             )
-        
+
         self.amount_due = amount_due
         self.last_four = card_number[-4:]
 
@@ -45,18 +45,14 @@ class CardPayment(Payment):
 class CashPayment(Payment):
     def __init__(self, amount_due: float, cash_received: float):
         if amount_due <= 0 or cash_received <= 0:
-            raise ValueError(
-                "Amount due and received cash must be greater than 0."
-            )
+            raise ValueError("Amount due and received cash must be greater than 0.")
 
         self.amount_due = amount_due
         self.cash_received = cash_received
 
     def pay(self) -> str:
         if self.cash_received < self.amount_due:
-            raise ValueError(
-                "Received cash cannot be less than amount due."
-            )
+            raise ValueError("Received cash cannot be less than amount due.")
 
         change = self.cash_received - self.amount_due
 

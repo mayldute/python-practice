@@ -27,7 +27,7 @@ class Product:
         self.price = price
 
 
-class ShoppingCart():
+class ShoppingCart:
     def __init__(self) -> None:
         self.cart: dict[Product, int] = {}
 

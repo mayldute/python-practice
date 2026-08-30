@@ -16,7 +16,6 @@ Requirements:
 
 
 def second_largest(items: list[int]) -> int | None:
-
     if len(items) < 2:
         return None
 

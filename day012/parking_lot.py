@@ -84,7 +84,7 @@ class Vehicle:
             raise ValueError("License plate cannot be empty.")
 
         if not isinstance(vehicle_type, VehicleType):
-            raise ValueError(f"Wrong vehicle type. Choose from: {list(VehicleType)}.")
+            raise TypeError(f"Wrong vehicle type. Choose from: {list(VehicleType)}.")
 
         self.license_plate = license_plate
         self.vehicle_type = vehicle_type
@@ -102,7 +102,7 @@ class ParkingSpot:
             raise ValueError("Spot number must be greater than 0.")
 
         if not isinstance(spot_type, VehicleType):
-            raise ValueError(f"Wrong spot type. Choose from: {list(VehicleType)}.")
+            raise TypeError(f"Wrong spot type. Choose from: {list(VehicleType)}.")
 
         self.spot_number = spot_number
         self.spot_type = spot_type

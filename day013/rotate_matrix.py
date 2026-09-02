@@ -31,7 +31,9 @@ def rotate_matrix_v1(matrix: list[list[int]]) -> list[list[int]]:
 
 def rotate_matrix_v2(matrix: list[list[int]]) -> list[list[int]]:
     new_matrix = [[0 for _ in range(len(matrix))] for _ in range(len(matrix))]
-    current_layer = 0   # current layer: 0 = outside, 1 = one step inside, 2 = two steps inside
+    current_layer = (
+        0  # current layer: 0 = outside, 1 = one step inside, 2 = two steps inside
+    )
 
     if len(matrix) % 2 != 0:
         center = len(matrix) // 2
@@ -44,14 +46,42 @@ def rotate_matrix_v2(matrix: list[list[int]]) -> list[list[int]]:
             new_matrix[col_idx][last] = matrix[current_layer][col_idx]
 
         for row_idx in range(current_layer + 1, last):
-            new_matrix[last][row_idx] = matrix[- 1 - row_idx][last]
+            new_matrix[last][row_idx] = matrix[-1 - row_idx][last]
 
         for col_idx in range(current_layer, last + 1):
             new_matrix[col_idx][current_layer] = matrix[last][col_idx]
 
         for row_idx in range(current_layer + 1, last):
-            new_matrix[current_layer][row_idx] = matrix[- 1 - row_idx][current_layer]
+            new_matrix[current_layer][row_idx] = matrix[-1 - row_idx][current_layer]
 
         current_layer += 1
 
     return new_matrix
+
+
+def rotate_matrix_v3(matrix: list[list[int]]) -> list[list[int]]:
+    current_layer = (
+        0  # current layer: 0 = outside, 1 = one step inside, 2 = two steps inside
+    )
+
+    while current_layer < len(matrix) // 2:
+        last = len(matrix) - 1 - current_layer  # opposite edge of the current layer
+
+        for i in range(current_layer, last):
+            offset = (
+                i - current_layer
+            )  # distance from the start of the current layer; used to find the matching element on the opposite side
+
+            top = matrix[current_layer][i]
+            right = matrix[i][last]
+            bottom = matrix[last][last - offset]
+            left = matrix[last - offset][current_layer]
+
+            matrix[current_layer][i] = left
+            matrix[i][last] = top
+            matrix[last][last - offset] = right
+            matrix[last - offset][current_layer] = bottom
+
+        current_layer += 1
+
+    return matrix

@@ -25,7 +25,7 @@ Examples of valid substrings:
 """
 
 
-def longest_substring_without_repeating(s: str) -> int:
+def longest_substring_without_repeating_v1(s: str) -> int:
     if not s:
         return 0
 
@@ -44,5 +44,21 @@ def longest_substring_without_repeating(s: str) -> int:
             )
             count = len(current_substring)
             max_count = max(max_count, count)
+
+    return max_count
+
+
+def longest_substring_without_repeating_v2(s: str) -> int:
+    seen = set()
+    left = 0
+    max_count = 0
+
+    for right in range(len(s)):
+        while s[right] in seen:
+            seen.remove(s[left])
+            left += 1
+
+        seen.add(s[right])
+        max_count = max(max_count, right - left + 1)
 
     return max_count

@@ -33,7 +33,7 @@ def max_subarray_sum(nums: list[int]) -> int:
     for num in nums[1:]:
         current_sum += num
 
-        if current_sum < num:
+        if current_sum < num:  # noqa: PLR1730
             current_sum = num
 
         max_sum = max(max_sum, current_sum)

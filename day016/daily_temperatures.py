@@ -1,17 +1,20 @@
 """
-Return the number of days until a warmer temperature for each day.
+Solve the Daily Temperatures problem using a monotonic stack.
 
-For each temperature, find the number of days that must pass before
-a strictly warmer temperature appears. If no warmer temperature
-exists in the future, return 0 for that day.
+For each temperature, return the number of days that must pass before
+a strictly warmer temperature appears. If no warmer temperature exists
+in the future, return 0 for that day.
 
 Requirements:
 - Return a new list.
 - Preserve the original input list.
-- Keep the result aligned with the corresponding input indices.
+- Keep each result aligned with its corresponding input index.
 - Return an empty list for an empty input.
 - Handle repeated temperatures correctly.
+- Use a stack to track temperatures that are waiting for a warmer day.
 - Avoid comparing every temperature with all following temperatures.
+- Aim for O(n) time complexity.
+- Use O(n) additional space complexity.
 
 Examples:
 - [73, 74, 75, 71, 69, 72, 76, 73]
